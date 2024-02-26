@@ -1,0 +1,110 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 15px 7%;
+    transition: 0.5s;
+}
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+ul{
+    flex: 1;
+    list-style: none;
+    text-align: center;
+    display: flex; /* Ensure list items stay in a single line horizontally */
+    justify-content: center; /* Center list items horizontally */
+}
+ul li{
+    display: inline-block;
+    margin: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+ul li:hover {
+    color: #007bff; /* Change text color on hover */
+}
+.toggle-icon{
+    width: 50px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    background: #242424;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.search-box input{
+    padding: 6px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 18px;
+    max-width: 200px;
+}
+.search-box input::placeholder{
+    color: #fff;
+}
+.search-box img{
+    width:20px;
+    cursor:pointer;
+}
+.dark .navbar{
+    background: #000;
+    color: #fff;
+}
+.dark .search-box{
+    background: #fff;
+}
+.dark .search-box input{
+    color:#222;
+}
+
+.dark .search-box input::placeholder{
+    color:#222;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%; /* Adjust padding for smaller screens */
+    }
+
+    .logo {
+        width: 120px; /* Decrease logo size for smaller screens */
+    }
+    ul {
+        display: flex; /* Show navigation links as flex container */
+        justify-content: center; /* Center navigation links */
+       
+    }
+
+    ul li {
+        margin: 10px; /* Adjust margin for smaller screens */
+    }
+
+    .toggle-icon {
+        display: block; /* Display toggle icon for mobile menu */
+    }
+
+    .search-box {
+        display: none; /* Hide search box on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    ul li {
+        margin: 10px 10px; /* Adjust margin for smaller screens */
+        font-size: 3vw;
+    }
+    .toggle-icon {
+        width: 7%; /* Adjust width percentage for smaller screens */
+        margin-left: 10px; /* Add margin for smaller screens */
+    }
+}
